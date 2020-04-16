@@ -1,10 +1,10 @@
 import HTTP from 'http';
 import WebSocket from 'ws';
 import { promises as fs } from 'fs';
-import { ChildProcess, fork } from 'child_process';
+import { fork } from 'child_process';
 import { resolve } from 'path';
 
-const PORT = 9999;
+const PORT = process.env.PORT;
 let childProcessDebugPort = process.debugPort;
 const mimeTypes = {
     'html': 'text/html',

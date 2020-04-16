@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "node build/app.js"
+    "start": "node build/app.js",
+    "dev": "PORT=9999 node build/app.js"
   },
   "author": "Vladislav Hutych",
   "license": "ISC",
