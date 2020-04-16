@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Crawler</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/tm">
+                <img src="./tm.svg" width="150px" height="40px" alt="">
+            </a>
+            <a class="navbar-brand" href="/tf">
+                <img src="./tf.svg" width="150px" height="40px" alt="">
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div class="jumbotron container main-container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- <a role="button" class="btn btn-outline-primary">Primary</a> -->
+                <p>
+                    <a href="https://techfeed.net/" class="display-4" target="blank">ThinkMobiles</a>
+                </p>
+                <ul class="list-group list-group-horizontal timing-block">
+                    <li class="list-group-item" id="avgLoad">Average: 0</li>
+                    <li class="list-group-item" id="fastestLoad">Fastest: 0</li>
+                    <li class="list-group-item" id="slowestLoad">Slowest: 0</li>
+                </ul>
+            </div>
+            <hr class="my-4">
+            <div class="alert alert-primary d-flex justify-content-between align-items-center" role="alert">
+                <strong id="currentUrl">URL</strong>
+                <span class="badge badge-info badge-pill" id="totalParsed">0</span>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Success load:
+                    <span class="badge badge-success badge-pill" id="successStatus">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Server redirects:
+                    <span class="badge badge-warning badge-pill" id="redirectStatus">0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Internal server errors:
+                    <span class="badge badge-danger badge-pill" id="errorStatus">0</span>
+                </li>
+              </ul>
+        </div>
+    </main>
+    <script src="./scripts.js"></script>
+</body>
+</html>
