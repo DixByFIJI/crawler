@@ -67,9 +67,8 @@ wss.on('connection', (socket, req) => {
 
         const childPath = resolve(__dirname, './crawler');
         channel.process = fork(childPath, [ channel.url ], { 
-            execArgv: [
-                `--inspect-brk=${ ++childProcessDebugPort }`
-            ]
+            execArgv: process.env.NODE_ENV === 'development' 
+                ? [ `--inspect-brk=${ ++childProcessDebugPort }`] : []
         });
     }
 
